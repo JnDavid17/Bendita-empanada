@@ -1,13 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&family=Source+Sans+Pro&display=swap");
+
+/* Opcion 1 (Es la que esta arriba)
+font-family: 'Quicksand', sans-serif; ES EL TITULO
+
+font-family: 'Source Sans Pro', sans-serif ES EL TEXTO; */
+
+/* Opcion 2
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Playfair+Display&display=swap');
+font-family: 'Josefin Sans', sans-serif; ES EL TITULO
+font-family: 'Playfair Display', serif; ES EL TEXTO*/
+
+/* Opcion 3
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Nunito&display=swap');
+font-family: 'Fjalla One', sans-serif; ES EL TITULO
+
+font-family: 'Nunito', sans-serif; ES EL TEXTO */
+
+/* Opcion 4
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Quattrocento+Sans&display=swap');
+font-family: 'Playfair Display', serif; ES EL TITULO
+
+font-family: 'Quattrocento Sans', sans-serif; ES EL TEXTO */
+
+/* Opcion 5
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Source+Sans+Pro&display=swap');
+font-family: 'Lora', serif; ES EL TITULO
+
+font-family: 'Source Sans Pro', sans-serif; ES EL TEXTO */
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --fontTitles: "Quicksand", sans-serif;
+  --fontSubtitles: "Source Sans Pro", sans-serif;
+  --fontText: "Montserrat", sans-serif;
+  --sizeTitles: 57px;
+  --sizeSubtitles: 24px;
+  --sizeNormalText: 17px;
+
+  --primaryColor: #EBA83A;
+  --secondaryColor: #BB371A;
+  --terciaryColor: #FFF8D9;
+  --fourthColor: #D5DBB3;
+}
+
+/* Estilos generales para los botones */
+
+button {
+  min-width: 130px;
+  height: 40px;
+  font-weight: bolder;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  z-index: 0;
+  font-size: var(--sizeText);
+  font-family: var(--fontSubtitles);
+  background: var(--primaryColor);
+  overflow: hidden;
+  border: 2px solid var(--primaryColor);
+  color: black;
+}
+
+button:hover {
+  color: black;
+  border: 2px solid var(--secondaryColor);
+  top: 1px;
+}
+
+button:hover:after {
+  width: 100%;
+}
+
+button:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  transition: all 0.8s ease;
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background: var(--terciaryColor);
+}
+
+button:active {
+  box-shadow: 0 0 var(--fourthColor);
+  top: 5px;
+}
+
+/* Estilos generales para los títulos */
+
+h1 {
+  font-size: var(--sizeTitles);
+  font-family: var(--fontTitles);
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #9667a3 #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #8e7096;
+  border-radius: 50px;
+  border: 3px solid #ffffff;
 }
