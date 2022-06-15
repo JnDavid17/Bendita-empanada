@@ -1,7 +1,7 @@
 .containerSlider {
   width: 65vw;
   height: 80vh;
-  margin: 100px auto 0;
+  margin: 200px auto 0;
   position: relative;
   overflow: hidden;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
