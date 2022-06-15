@@ -111,7 +111,7 @@ h1 {
 /* Firefox */
 * {
   scrollbar-width: auto;
-  scrollbar-color: #9667a3 #ffffff;
+  scrollbar-color: var(--secondaryColor) #ffffff;
 }
 
 /* Chrome, Edge, and Safari */
